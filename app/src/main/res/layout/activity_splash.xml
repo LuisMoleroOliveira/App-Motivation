@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="@string/vamos_comecar"
-        android:textColor="@color/white"
         android:textSize="32sp" />
 
     <EditText
@@ -24,9 +23,8 @@
         android:gravity="center"
         android:hint="@string/qual_seu_nome"
         android:inputType="text"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/buttonSave"
