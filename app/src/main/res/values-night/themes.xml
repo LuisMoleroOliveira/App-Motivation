@@ -16,4 +16,5 @@
         <item name="android:textColorHint">@color/white</item>
         <!-- Customize your theme here. -->
     </style>
+
 </resources>
