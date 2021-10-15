@@ -48,11 +48,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearMenu"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:text="Hello World"
-        android:textSize="18sp"
+        android:layout_margin="16dp"
         android:background="@color/white"
-        android:textColor="@color/black"/>
+        android:text="Hello World"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textPhrase"
@@ -60,8 +60,10 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginTop="32dp"
+        android:layout_margin="16dp"
         android:background="@color/white"
         android:text="Frase"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="22sp" />
     <View

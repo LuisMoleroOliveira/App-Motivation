@@ -6,21 +6,28 @@ import android.view.View
 import br.com.molero.motivation.R
 import br.com.molero.motivation.infra.MotivationConstants
 import br.com.molero.motivation.infra.SecurityPreferences
+import br.com.molero.motivation.repository.Mock
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var mSecurityPreferences: SecurityPreferences
+    private var mPhraseFilter: Int = MotivationConstants.PHRASEFILTER.ALL
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        if (supportActionBar != null) supportActionBar!!.hide()
+
         mSecurityPreferences = SecurityPreferences(this)
         textName.text = mSecurityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
 
-        if(supportActionBar != null) supportActionBar!!.hide()
-
+        //Lógica inicial de seleção
+        imageAll.setColorFilter(resources.getColor(R.color.colorAccent))
+        handleNewPhrase()
+        //Término lógica inicial
 
 
         buttonNewPhrase.setOnClickListener(this)
@@ -41,7 +48,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun handleNewPhrase() {
-
+        textPhrase.text = Mock().getPhrase(mPhraseFilter)
     }
 
     private fun handleFilter(id: Int) {
@@ -52,12 +59,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         when (id) {
             R.id.imageAll -> {
                 imageAll.setColorFilter(resources.getColor(R.color.colorAccent))
+                mPhraseFilter = MotivationConstants.PHRASEFILTER.ALL
             }
             R.id.imageHappy -> {
                 imageHappy.setColorFilter(resources.getColor(R.color.colorAccent))
+                mPhraseFilter = MotivationConstants.PHRASEFILTER.HAPPY
             }
             R.id.imageMorning -> {
                 imageMorning.setColorFilter(resources.getColor(R.color.colorAccent))
+                mPhraseFilter = MotivationConstants.PHRASEFILTER.MORNING
             }
 
         }
