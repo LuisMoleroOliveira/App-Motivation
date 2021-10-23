@@ -48,9 +48,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearMenu"
         android:layout_centerHorizontal="true"
-        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:background="@color/white"
-        android:text="Hello World"
+        android:text="@string/ola"
         android:textColor="@color/black"
         android:textSize="18sp" />
 
@@ -59,8 +62,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginTop="32dp"
-        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:background="@color/white"
         android:text="Frase"
         android:textAlignment="center"
@@ -82,8 +87,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/ripple_button"
         android:padding="16dp"
-        android:text="Nova Frase"
-        android:background="@drawable/ripple_button"/>
+        android:text="@string/nova_frase" />
 
 </RelativeLayout>

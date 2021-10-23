@@ -43,6 +43,7 @@ class Mock {
 
         // Número aleatório de 0 ao tamanho da lista retornada do filtro
         val rand = Random().nextInt(filtered.size)
+        //val rand = (filtered.size).random()
 
         // Retorna string
         return filtered[rand].description
