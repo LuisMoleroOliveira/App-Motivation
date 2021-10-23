@@ -66,13 +66,14 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="22sp" />
+
     <View
         android:id="@+id/viewPhrase"
         android:layout_width="128dp"
         android:layout_height="3dp"
-        android:layout_marginTop="32dp"
         android:layout_below="@+id/textPhrase"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
 
     <Button
         android:id="@+id/buttonNewPhrase"
@@ -82,6 +83,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
         android:padding="16dp"
-        android:text="Nova Frase" />
+        android:text="Nova Frase"
+        android:background="@drawable/ripple_button"/>
 
 </RelativeLayout>

@@ -42,7 +42,7 @@ class Mock {
         val filtered = mListPhrases.filter { (it.category == value || value == ALL) }
 
         // Número aleatório de 0 ao tamanho da lista retornada do filtro
-        val rand = (filtered.size).random()
+        val rand = Random().nextInt(filtered.size)
 
         // Retorna string
         return filtered[rand].description
